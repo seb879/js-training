@@ -10,6 +10,15 @@
  */
 
 // Your code :
+function multiply(n1, n2) {
+    if (n1 === 0 || n2 === 0) {
+      return 0;
+    } else if (n2 > 0) {
+      return n1 + multiply(n1, n2 - 1);
+    } else {
+      return -n1 + multiply(n1, n2 + 1);
+    }
+  }
 
 //* Begin of tests
 const assert = require('assert')
